@@ -1,0 +1,16 @@
+services:
+  # chain:
+  #   build:
+  #     context: chain
+  #     dockerfile: Dockerfile
+  webui:
+    build:
+      context: webui
+      dockerfile: Dockerfile
+    environment:
+      # general identifier
+      - CHALL_ID=0
+      # in seconds
+      - POW_TIMEOUT=10
+      # how many leading 0 bits (max. 256, rec. 22)
+      - POW_DIFFICULTY=22
